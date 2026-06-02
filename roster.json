@@ -1,0 +1,37 @@
+{
+  "company": "The Black Company",
+  "author": "Glen Cook",
+  "note": "The Black Company sorted into the ROOT0 specialty classes, in the manner of the muster roll. Wizards filed by what their magic does. An interpretation — re-sort freely; roster.json is the source of truth. Characters by Glen Cook, referenced as inspiration only.",
+  "annalist_creed": "If it isn't in the Annals, it didn't happen.",
+  "classes": [
+    { "id": "wiz-white",  "label": "Wizard · White",  "spec": "healing",          "color": "#e9e4d6", "ink": "#1a1a1a" },
+    { "id": "wiz-black",  "label": "Wizard · Black",  "spec": "destruction",      "color": "#141416", "ink": "#dcdcdc" },
+    { "id": "wiz-red",    "label": "Wizard · Red",    "spec": "both",             "color": "#7c1518", "ink": "#fff" },
+    { "id": "wiz-purple", "label": "Wizard · Purple", "spec": "all + shadow — the Taken", "color": "#5a3a8a", "ink": "#fff" },
+    { "id": "command",    "label": "Command",         "spec": "the braid and the banner", "color": "#b8862b", "ink": "#1a1a1a" },
+    { "id": "annalist",   "label": "The Annalist",    "spec": "the witness · the record", "color": "#6a6048", "ink": "#f2ead6" },
+    { "id": "comedy",     "label": "Comedy Relief",   "spec": "the feud that never ends", "color": "#c77d2a", "ink": "#1a1a1a" },
+    { "id": "fixers",     "label": "Fixers",          "spec": "the ones who simply do it", "color": "#3a4250", "ink": "#fff" },
+    { "id": "loyalty",    "label": "Undying Loyalty", "spec": "the old hands",    "color": "#6a4a2a", "ink": "#fff" },
+    { "id": "special",    "label": "The Captain",     "spec": "the title that became a name", "color": "#7c1518", "ink": "#fff" }
+  ],
+  "members": [
+    { "name": "Croaker",      "class": "wiz-white", "specialty": "Company physician — the cutter who keeps them breathing. (Also the Annalist, and later the Captain — see below.)" },
+    { "name": "One-Eye",      "class": "wiz-black", "specialty": "Ancient wizard in the battered black hat; the poisoned spear; half the Company's magic and most of its trouble." },
+    { "name": "Goblin",       "class": "wiz-black", "specialty": "Toad-faced sorcerer; One-Eye's eternal rival; deadly when he stops bickering long enough to cast." },
+    { "name": "Silent",       "class": "wiz-red",   "specialty": "The mute sorcerer. Speaks only in spellwork — heals and harms without a word." },
+    { "name": "The Lady",     "class": "wiz-purple","specialty": "Sorceress-empress, heir to the Domination. Beauty and near-absolute power; one of the Taken's makers. Later Croaker's." },
+    { "name": "Soulcatcher",  "class": "wiz-purple","specialty": "One of the Ten Who Were Taken. Many voices in one cowl; brilliant, playful, mad." },
+    { "name": "The Limper",   "class": "wiz-purple","specialty": "A Taken. Cruel, relentless, and very hard to keep dead." },
+    { "name": "The Lieutenant","class": "command",  "specialty": "The Captain's second; the steady hand that ran the Company between battles." },
+    { "name": "Darling",      "class": "command",   "specialty": "Deaf girl who becomes the White Rose — null to all sorcery, the banner reborn. The cause the Company comes to serve." },
+    { "name": "Croaker (Annalist)", "class": "annalist", "specialty": "Narrator and keeper of the Annals; physician; later Captain. The Company's memory — and its creed: if it isn't in the Annals, it didn't happen." },
+    { "name": "Murgen",       "class": "annalist",  "specialty": "Standard-bearer turned Annalist; carried the banner and the record both, even unstuck in time." },
+    { "name": "Sleepy",       "class": "annalist",  "specialty": "Later Annalist and Captain; carried the Company through the Glittering Stone years." },
+    { "name": "One-Eye & Goblin", "class": "comedy","specialty": "Centuries of pranks, curses, and insults — the Company's running joke, and its deepest grief when the feud finally ends." },
+    { "name": "Raven",        "class": "fixers",    "specialty": "Cold, methodical, lethal. Darling's protector. The man who simply does what must be done, and says nothing after." },
+    { "name": "Elmo",         "class": "loyalty",   "specialty": "Sergeant. The steady core of the line; the Company's spine made flesh." },
+    { "name": "Otto & Hagop", "class": "loyalty",   "specialty": "The two who always come back — together, grumbling, alive. Old hands, gallows-loyal to the last march." },
+    { "name": "The Captain",  "class": "special",   "specialty": "Known by no other name. The original commander of the Black Company; the title that became a name. He held them together through the hardest years and, when he fell, passed the title to Croaker. The Annals record his death — the exact circumstance is theirs to tell, not mine to invent." }
+  ]
+}

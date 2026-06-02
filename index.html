@@ -1,0 +1,461 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>The Annals · The Black Company</title>
+<meta name="description" content="The Annals — a muster roll for the Black Company, sorted by specialty class. Grim, literary, restrained." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=IM+Fell+English:ital@0;1&family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --bg:#0c0c0e;
+    --panel:#121214;
+    --bone:#d9cdb0;
+    --bone-dim:#9a917b;
+    --blood:#7c1518;
+    --brass:#b8862b;
+    --rule:#2a2823;
+    --rule-soft:rgba(217,205,176,.10);
+  }
+  *{box-sizing:border-box}
+  html{ -webkit-text-size-adjust:100% }
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--bone);
+    font-family:"EB Garamond", Georgia, serif;
+    font-size:18px;
+    line-height:1.65;
+    /* faint iron/parchment grain */
+    background-image:
+      radial-gradient(120% 80% at 50% -10%, rgba(184,134,43,.05), transparent 60%),
+      repeating-linear-gradient(0deg, rgba(255,255,255,.012) 0 1px, transparent 1px 3px),
+      repeating-linear-gradient(90deg, rgba(0,0,0,.18) 0 1px, transparent 1px 4px);
+    background-attachment:fixed;
+  }
+  ::selection{ background:var(--blood); color:var(--bone) }
+  a{ color:var(--brass); text-decoration:none; border-bottom:1px solid rgba(184,134,43,.35) }
+  a:hover{ color:#d9a847; border-bottom-color:rgba(184,134,43,.7) }
+
+  .wrap{ max-width:780px; margin:0 auto; padding:0 22px }
+  .display{ font-family:"IM Fell English", Georgia, serif }
+  .label{ font-family:"Space Mono", ui-monospace, monospace; text-transform:uppercase; letter-spacing:.18em; font-size:.66rem }
+
+  .hairline{ height:1px; background:var(--rule); border:0; margin:0 }
+  .hair-soft{ height:1px; background:var(--rule-soft); border:0; margin:0 }
+
+  /* ---------- Masthead: black banner ---------- */
+  .masthead{
+    text-align:center;
+    padding:64px 22px 40px;
+    border-bottom:1px solid var(--rule);
+    background:
+      linear-gradient(180deg, #050506 0%, #0c0c0e 100%);
+    position:relative;
+  }
+  .masthead::before,
+  .masthead::after{
+    content:""; position:absolute; left:0; right:0; height:2px;
+    background:linear-gradient(90deg, transparent, var(--blood), transparent);
+    opacity:.55;
+  }
+  .masthead::before{ top:0 }
+  .masthead::after{ bottom:0 }
+  .banner-kicker{ color:var(--bone-dim); margin-bottom:18px }
+  .masthead h1{
+    font-family:"IM Fell English", Georgia, serif;
+    font-weight:400;
+    margin:0;
+    color:var(--bone);
+    font-size:clamp(2.4rem, 7vw, 4.4rem);
+    line-height:1.02;
+    letter-spacing:.01em;
+    text-shadow:0 2px 0 #000, 0 0 28px rgba(0,0,0,.6);
+  }
+  .masthead .sub{
+    margin:14px 0 0;
+    color:var(--bone-dim);
+    font-style:italic;
+    font-size:1.05rem;
+  }
+  .creed{
+    font-family:"IM Fell English", Georgia, serif;
+    font-style:italic;
+    color:var(--blood);
+    font-size:clamp(1.15rem, 3.4vw, 1.6rem);
+    margin:30px auto 0;
+    max-width:34ch;
+    text-shadow:0 1px 0 #000;
+  }
+  .note{
+    margin:26px auto 0;
+    max-width:60ch;
+    color:var(--bone-dim);
+    font-size:.92rem;
+    line-height:1.55;
+    font-style:italic;
+  }
+  .note .by{ display:block; margin-top:8px; font-style:normal }
+
+  /* ---------- Section scaffolding ---------- */
+  section{ padding:48px 0 12px }
+  .sec-head{ text-align:center; margin-bottom:30px }
+  .sec-head .label{ color:var(--brass); display:inline-block }
+  .sec-head h2{
+    font-family:"IM Fell English", Georgia, serif;
+    font-weight:400; margin:.35em 0 0;
+    font-size:1.7rem; color:var(--bone);
+  }
+
+  /* ---------- Wizard colors legend ---------- */
+  .legend{
+    display:grid;
+    grid-template-columns:repeat(4, 1fr);
+    gap:12px;
+  }
+  .swatch{
+    border:1px solid var(--rule);
+    background:var(--panel);
+    padding:14px 12px;
+    text-align:center;
+  }
+  .swatch .chip{
+    width:100%; height:34px; margin-bottom:10px;
+    border:1px solid rgba(0,0,0,.5);
+    box-shadow:inset 0 0 0 1px rgba(255,255,255,.04);
+  }
+  .swatch .tier{
+    font-family:"Space Mono", monospace;
+    text-transform:uppercase; letter-spacing:.12em;
+    font-size:.62rem; color:var(--bone);
+  }
+  .swatch .does{ display:block; color:var(--bone-dim); font-size:.82rem; font-style:italic; margin-top:4px }
+
+  /* ---------- The Roll ---------- */
+  .roll{ padding-top:8px }
+  .class-block{
+    margin:0 0 30px;
+    border:1px solid var(--rule);
+    border-left:4px solid var(--accent, var(--brass));
+    background:var(--panel);
+    padding:20px 22px 8px;
+  }
+  .class-block > .class-head{ margin-bottom:8px }
+  .class-tag{
+    display:inline-block;
+    font-family:"Space Mono", monospace;
+    text-transform:uppercase; letter-spacing:.14em;
+    font-size:.62rem;
+    padding:4px 9px;
+    color:var(--tag-ink, #1a1a1a);
+    background:var(--accent, var(--brass));
+    border:1px solid rgba(0,0,0,.45);
+  }
+  .class-block h3{
+    font-family:"IM Fell English", Georgia, serif;
+    font-weight:400; font-size:1.5rem;
+    margin:12px 0 2px; color:var(--bone);
+  }
+  .class-spec{ color:var(--bone-dim); font-style:italic; font-size:.95rem; margin:0 0 14px }
+
+  .member{ padding:13px 0; border-top:1px solid var(--rule-soft) }
+  .member:first-of-type{ border-top:1px solid var(--rule) }
+  .member .name{
+    font-family:"IM Fell English", Georgia, serif;
+    font-size:1.22rem; color:var(--bone); line-height:1.25;
+  }
+  .member .spec{ color:var(--bone-dim); font-size:.96rem; margin-top:3px }
+
+  /* black-wizard panel: darker */
+  .class-block.is-black{ background:#08080a; border-color:#000 }
+  .class-block.is-black .name{ color:#cfcabb }
+  /* red wizard: faint blood wash */
+  .class-block.is-red{ background:linear-gradient(180deg, rgba(124,21,24,.10), var(--panel)) }
+  /* purple Taken: shadowed, ominous */
+  .class-block.is-purple{
+    background:radial-gradient(120% 140% at 0% 0%, rgba(90,58,138,.18), #0a090d 70%);
+    border-color:#1c1426;
+    box-shadow:inset 0 0 60px rgba(0,0,0,.7), 0 0 28px rgba(38,22,60,.35);
+  }
+  .class-block.is-purple h3,
+  .class-block.is-purple .name{ color:#cdbfe0 }
+  .class-block.is-purple .member .spec{ color:#8a7da3 }
+  /* command: brass */
+  .class-block.is-command h3{ color:#e8cf9a }
+
+  /* ---------- The Captain ---------- */
+  .captain{
+    text-align:center;
+    padding:0 22px 80px;
+    margin-top:30px;
+  }
+  .captain .heavy-rule{
+    height:3px; border:0; margin:0 auto 4px; max-width:780px;
+    background:linear-gradient(90deg, transparent, var(--blood) 20%, var(--blood) 80%, transparent);
+  }
+  .captain .heavy-rule + .hair-soft{ max-width:780px; margin:0 auto }
+  .captain .label{ color:var(--blood); display:inline-block; margin-top:40px }
+  .captain h2{
+    font-family:"IM Fell English", Georgia, serif;
+    font-weight:400; margin:48px 0 0;
+    font-size:clamp(2.4rem, 8vw, 4rem);
+    color:var(--bone); line-height:1.05;
+    text-shadow:0 0 30px rgba(0,0,0,.7);
+  }
+  .captain .epitaph{
+    color:var(--bone-dim); font-style:italic;
+    max-width:46ch; margin:28px auto 0;
+    font-size:1.08rem; line-height:1.7;
+  }
+  .captain .stands-alone{
+    margin-top:40px; color:var(--blood);
+    font-family:"IM Fell English", serif; font-style:italic;
+    font-size:1.1rem;
+  }
+
+  /* ---------- Footer ---------- */
+  footer{
+    border-top:1px solid var(--rule);
+    padding:34px 22px 60px;
+    text-align:center;
+    color:var(--bone-dim);
+  }
+  footer .attribution{
+    font-family:"Space Mono", monospace; font-size:.66rem;
+    letter-spacing:.08em; text-transform:uppercase;
+    color:var(--bone-dim); line-height:1.9;
+  }
+  footer p{ margin:10px auto 0; max-width:60ch; font-size:.9rem }
+  footer .glen{ font-style:italic; margin-top:18px; color:var(--bone-dim) }
+
+  /* subtle reveal */
+  .reveal{ opacity:0; transform:translateY(10px); transition:opacity .7s ease, transform .7s ease }
+  .reveal.in{ opacity:1; transform:none }
+
+  @media (max-width:640px){
+    body{ font-size:17px }
+    .legend{ grid-template-columns:repeat(2, 1fr) }
+    .class-block{ padding:16px 16px 6px }
+  }
+  @media (prefers-reduced-motion: reduce){
+    .reveal{ opacity:1; transform:none; transition:none }
+    body{ background-attachment:scroll }
+  }
+</style>
+</head>
+<body>
+
+  <header class="masthead">
+    <div class="label banner-kicker">The Annals</div>
+    <h1 class="display">THE BLACK COMPANY</h1>
+    <p class="sub">the Annals · sorted by specialty class</p>
+    <p class="creed" id="creed"></p>
+    <p class="note" id="note"></p>
+  </header>
+
+  <main class="wrap">
+
+    <!-- The Wizard Colors -->
+    <section id="colors">
+      <div class="sec-head">
+        <span class="label">The Wizard Colors</span>
+        <h2 class="display">By What the Magic Does</h2>
+      </div>
+      <div class="legend" id="legend"></div>
+    </section>
+
+    <hr class="hair-soft" />
+
+    <!-- The Roll -->
+    <section id="the-roll">
+      <div class="sec-head">
+        <span class="label">The Muster Roll</span>
+        <h2 class="display">The Roll</h2>
+      </div>
+      <div class="roll" id="roll"></div>
+    </section>
+
+  </main>
+
+  <!-- The Captain (rendered by JS) -->
+  <section class="captain" id="captain"></section>
+
+  <footer>
+    <div class="attribution">
+      ROOT0-ATTRIBUTION-v1.0 · The Black Company — the Annals<br />
+      David Lee Wise / ROOT0 / TriPod LLC · MIT
+    </div>
+    <p><a href="https://github.com/DavidWise01/black-company">github.com/DavidWise01/black-company</a></p>
+    <p>see also: the <a href="https://github.com/DavidWise01/bridge-burners">Bridge Burners muster roll</a></p>
+    <p class="glen">Characters by Glen Cook, referenced as inspiration only.</p>
+  </footer>
+
+<script>
+"use strict";
+
+/* ---- The roster, embedded inline so the Annals stand without a fetch ---- */
+const ROSTER = {
+  "company": "The Black Company",
+  "author": "Glen Cook",
+  "note": "The Black Company sorted into the ROOT0 specialty classes, in the manner of the muster roll. Wizards filed by what their magic does. An interpretation — re-sort freely; roster.json is the source of truth. Characters by Glen Cook, referenced as inspiration only.",
+  "annalist_creed": "If it isn't in the Annals, it didn't happen.",
+  "classes": [
+    { "id": "wiz-white",  "label": "Wizard · White",  "spec": "healing",          "color": "#e9e4d6", "ink": "#1a1a1a" },
+    { "id": "wiz-black",  "label": "Wizard · Black",  "spec": "destruction",      "color": "#141416", "ink": "#dcdcdc" },
+    { "id": "wiz-red",    "label": "Wizard · Red",    "spec": "both",             "color": "#7c1518", "ink": "#fff" },
+    { "id": "wiz-purple", "label": "Wizard · Purple", "spec": "all + shadow — the Taken", "color": "#5a3a8a", "ink": "#fff" },
+    { "id": "command",    "label": "Command",         "spec": "the braid and the banner", "color": "#b8862b", "ink": "#1a1a1a" },
+    { "id": "annalist",   "label": "The Annalist",    "spec": "the witness · the record", "color": "#6a6048", "ink": "#f2ead6" },
+    { "id": "comedy",     "label": "Comedy Relief",   "spec": "the feud that never ends", "color": "#c77d2a", "ink": "#1a1a1a" },
+    { "id": "fixers",     "label": "Fixers",          "spec": "the ones who simply do it", "color": "#3a4250", "ink": "#fff" },
+    { "id": "loyalty",    "label": "Undying Loyalty", "spec": "the old hands",    "color": "#6a4a2a", "ink": "#fff" },
+    { "id": "special",    "label": "The Captain",     "spec": "the title that became a name", "color": "#7c1518", "ink": "#fff" }
+  ],
+  "members": [
+    { "name": "Croaker",      "class": "wiz-white", "specialty": "Company physician — the cutter who keeps them breathing. (Also the Annalist, and later the Captain — see below.)" },
+    { "name": "One-Eye",      "class": "wiz-black", "specialty": "Ancient wizard in the battered black hat; the poisoned spear; half the Company's magic and most of its trouble." },
+    { "name": "Goblin",       "class": "wiz-black", "specialty": "Toad-faced sorcerer; One-Eye's eternal rival; deadly when he stops bickering long enough to cast." },
+    { "name": "Silent",       "class": "wiz-red",   "specialty": "The mute sorcerer. Speaks only in spellwork — heals and harms without a word." },
+    { "name": "The Lady",     "class": "wiz-purple","specialty": "Sorceress-empress, heir to the Domination. Beauty and near-absolute power; one of the Taken's makers. Later Croaker's." },
+    { "name": "Soulcatcher",  "class": "wiz-purple","specialty": "One of the Ten Who Were Taken. Many voices in one cowl; brilliant, playful, mad." },
+    { "name": "The Limper",   "class": "wiz-purple","specialty": "A Taken. Cruel, relentless, and very hard to keep dead." },
+    { "name": "The Lieutenant","class": "command",  "specialty": "The Captain's second; the steady hand that ran the Company between battles." },
+    { "name": "Darling",      "class": "command",   "specialty": "Deaf girl who becomes the White Rose — null to all sorcery, the banner reborn. The cause the Company comes to serve." },
+    { "name": "Croaker (Annalist)", "class": "annalist", "specialty": "Narrator and keeper of the Annals; physician; later Captain. The Company's memory — and its creed: if it isn't in the Annals, it didn't happen." },
+    { "name": "Murgen",       "class": "annalist",  "specialty": "Standard-bearer turned Annalist; carried the banner and the record both, even unstuck in time." },
+    { "name": "Sleepy",       "class": "annalist",  "specialty": "Later Annalist and Captain; carried the Company through the Glittering Stone years." },
+    { "name": "One-Eye & Goblin", "class": "comedy","specialty": "Centuries of pranks, curses, and insults — the Company's running joke, and its deepest grief when the feud finally ends." },
+    { "name": "Raven",        "class": "fixers",    "specialty": "Cold, methodical, lethal. Darling's protector. The man who simply does what must be done, and says nothing after." },
+    { "name": "Elmo",         "class": "loyalty",   "specialty": "Sergeant. The steady core of the line; the Company's spine made flesh." },
+    { "name": "Otto & Hagop", "class": "loyalty",   "specialty": "The two who always come back — together, grumbling, alive. Old hands, gallows-loyal to the last march." },
+    { "name": "The Captain",  "class": "special",   "specialty": "Known by no other name. The original commander of the Black Company; the title that became a name. He held them together through the hardest years and, when he fell, passed the title to Croaker. The Annals record his death — the exact circumstance is theirs to tell, not mine to invent." }
+  ]
+};
+
+/* ---- helpers ---- */
+function esc(s){
+  return String(s == null ? "" : s)
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#39;");
+}
+function el(html){
+  const t = document.createElement("template");
+  t.innerHTML = html.trim();
+  return t.content.firstElementChild;
+}
+
+/* ---- masthead text ---- */
+document.getElementById("creed").textContent = "“" + ROSTER.annalist_creed + "”";
+const noteEl = document.getElementById("note");
+noteEl.textContent = ROSTER.note;
+const by = document.createElement("span");
+by.className = "by";
+by.textContent = "— Glen Cook";
+noteEl.appendChild(by);
+
+/* ---- the wizard colors legend ---- */
+(function buildLegend(){
+  const tiers = [
+    { id:"wiz-white",  name:"White",  does:"healing" },
+    { id:"wiz-black",  name:"Black",  does:"destruction" },
+    { id:"wiz-red",    name:"Red",    does:"both" },
+    { id:"wiz-purple", name:"Purple", does:"all + shadow — the Taken" }
+  ];
+  const byId = Object.fromEntries(ROSTER.classes.map(c => [c.id, c]));
+  const frag = document.createDocumentFragment();
+  tiers.forEach(t => {
+    const c = byId[t.id] || {};
+    const node = el(
+      '<div class="swatch reveal">' +
+        '<div class="chip" style="background:' + esc(c.color || "#333") + '"></div>' +
+        '<div class="tier">' + esc(t.name) + '</div>' +
+        '<span class="does">' + esc(t.does) + '</span>' +
+      '</div>'
+    );
+    frag.appendChild(node);
+  });
+  document.getElementById("legend").appendChild(frag);
+})();
+
+/* ---- the roll ---- */
+(function buildRoll(){
+  const rollEl = document.getElementById("roll");
+  const captainEl = document.getElementById("captain");
+  const frag = document.createDocumentFragment();
+
+  const variant = {
+    "wiz-black":"is-black",
+    "wiz-red":"is-red",
+    "wiz-purple":"is-purple",
+    "command":"is-command"
+  };
+
+  ROSTER.classes.forEach(cls => {
+    const members = ROSTER.members.filter(m => m.class === cls.id);
+
+    /* The Captain — final class — set apart, monumental */
+    if (cls.id === "special"){
+      const cap = members[0] || {};
+      captainEl.innerHTML =
+        '<hr class="heavy-rule" />' +
+        '<hr class="hair-soft" />' +
+        '<div class="reveal">' +
+          '<span class="label">' + esc(cls.label) + '</span>' +
+          '<h2 class="display">' + esc(cap.name || cls.label) + '</h2>' +
+          '<p class="epitaph">' + esc(cap.specialty || cls.spec) + '</p>' +
+          '<p class="stands-alone">He stands alone at the end of the Annals.</p>' +
+        '</div>';
+      return;
+    }
+
+    const block = el('<div class="class-block reveal ' + (variant[cls.id] || "") + '"></div>');
+    block.style.setProperty("--accent", cls.color || "#b8862b");
+    block.style.setProperty("--tag-ink", cls.ink || "#1a1a1a");
+
+    const head = el(
+      '<div class="class-head">' +
+        '<span class="class-tag">' + esc(cls.label) + '</span>' +
+        '<h3>' + esc(cls.label) + '</h3>' +
+        '<p class="class-spec">' + esc(cls.spec) + '</p>' +
+      '</div>'
+    );
+    block.appendChild(head);
+
+    members.forEach(m => {
+      block.appendChild(el(
+        '<div class="member">' +
+          '<div class="name">' + esc(m.name) + '</div>' +
+          '<div class="spec">' + esc(m.specialty) + '</div>' +
+        '</div>'
+      ));
+    });
+
+    frag.appendChild(block);
+  });
+
+  rollEl.appendChild(frag);
+})();
+
+/* ---- subtle reveal (respects prefers-reduced-motion) ---- */
+(function reveals(){
+  const reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const nodes = document.querySelectorAll(".reveal");
+  if (reduce || !("IntersectionObserver" in window)){
+    nodes.forEach(n => n.classList.add("in"));
+    return;
+  }
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting){ e.target.classList.add("in"); io.unobserve(e.target); }
+    });
+  }, { rootMargin:"0px 0px -8% 0px", threshold:0.08 });
+  nodes.forEach(n => io.observe(n));
+})();
+</script>
+</body>
+</html>
