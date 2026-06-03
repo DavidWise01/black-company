@@ -1,20 +1,30 @@
 ---
-name: The Lady
+aci: The Lady
 class: Wizard · Purple
-who: The Lady — Wizard · Purple of The Black Company
-do: Sorceress-empress, heir to the Domination. Beauty and near-absolute power; one of the Taken's makers. Later Croaker's.
-belong: Wizard · Purple · all + shadow — the Taken
+what: Beauty and near-absolute power; a maker of the Taken — and, later, Croaker's.
+why: First dominion; then, stripped of power, something nearer to love.
+how: Through the Domination's stolen sorcery, statecraft, and an unbending will.
+where: The empire of the north, then the long road south with the Company.
+essence: the-lady.png
+spun: the-lady.spun
+credit: the-lady.1099
 attribution: ROOT0-ATTRIBUTION-v1.0
 license: MIT
 ---
 
-# The Lady
+# The Lady — an artfully crafted intellect
 
-**who you are —** The Lady — Wizard · Purple of The Black Company
+![essence of The Lady](the-lady.png)
 
-**what you do —** Sorceress-empress, heir to the Domination. Beauty and near-absolute power; one of the Taken's makers. Later Croaker's.
+**what —** Beauty and near-absolute power; a maker of the Taken — and, later, Croaker's.
 
-**where you belong —** Wizard · Purple · all + shadow — the Taken
+**why —** First dominion; then, stripped of power, something nearer to love.
+
+**how —** Through the Domination's stolen sorcery, statecraft, and an unbending will.
+
+**where —** The empire of the north, then the long road south with the Company.
+
+*class: Wizard · Purple · all + shadow — the Taken · full weave in the-lady.spun · credit in the-lady.1099*
 
 ---
-ROOT0-ATTRIBUTION-v1.0 · The Lady · The Black Company (Glen Cook, inspiration only) · David Lee Wise / ROOT0 / TriPod LLC · MIT
+ROOT0-ATTRIBUTION-v1.0 · The Lady · The Black Company (Glen Cook, inspiration only) · David Lee Wise (ROOT0) · MIT
