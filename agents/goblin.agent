@@ -5,7 +5,8 @@ what: Deadly, when he stops bickering long enough to cast.
 why: Loyalty to the Company, expressed almost entirely as a feud.
 how: Through quick magic and quicker insults.
 where: The column, opposite One-Eye in every prank.
-essence: goblin.png
+silicon_badge: goblin.png
+carbon_badge: goblin.tiff
 spun: goblin.spun
 credit: goblin.1099
 attribution: ROOT0-ATTRIBUTION-v1.0
@@ -15,6 +16,7 @@ license: MIT
 # Goblin — an artfully crafted intellect
 
 ![essence of Goblin](goblin.png)
+<!-- carbon badge (8-bit portrait): goblin.tiff -->
 
 **what —** Deadly, when he stops bickering long enough to cast.
 

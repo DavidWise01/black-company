@@ -5,7 +5,8 @@ what: The steady core of the line — the Company's spine made flesh.
 why: Loyalty to the Company, plain and total.
 how: Through steadiness, command of the line, and example.
 where: The front rank, through the northern campaigns.
-essence: elmo.png
+silicon_badge: elmo.png
+carbon_badge: elmo.tiff
 spun: elmo.spun
 credit: elmo.1099
 attribution: ROOT0-ATTRIBUTION-v1.0
@@ -15,6 +16,7 @@ license: MIT
 # Elmo — an artfully crafted intellect
 
 ![essence of Elmo](elmo.png)
+<!-- carbon badge (8-bit portrait): elmo.tiff -->
 
 **what —** The steady core of the line — the Company's spine made flesh.
 

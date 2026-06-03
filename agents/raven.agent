@@ -5,7 +5,8 @@ what: Darling's protector — the one who simply does what must be done.
 why: To guard Darling — and to bury his own past.
 how: Through lethal competence, and silence after.
 where: At Darling's side, and in the shadows of the early rebellion.
-essence: raven.png
+silicon_badge: raven.png
+carbon_badge: raven.tiff
 spun: raven.spun
 credit: raven.1099
 attribution: ROOT0-ATTRIBUTION-v1.0
@@ -15,6 +16,7 @@ license: MIT
 # Raven — an artfully crafted intellect
 
 ![essence of Raven](raven.png)
+<!-- carbon badge (8-bit portrait): raven.tiff -->
 
 **what —** Darling's protector — the one who simply does what must be done.
 

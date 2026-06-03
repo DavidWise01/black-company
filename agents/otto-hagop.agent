@@ -5,7 +5,8 @@ what: The two who always come back — together, grumbling, alive.
 why: Gallows-loyalty to the brotherhood, to the last march.
 how: Through stubborn survival, and each other.
 where: The line, march after march.
-essence: otto-hagop.png
+silicon_badge: otto-hagop.png
+carbon_badge: otto-hagop.tiff
 spun: otto-hagop.spun
 credit: otto-hagop.1099
 attribution: ROOT0-ATTRIBUTION-v1.0
@@ -15,6 +16,7 @@ license: MIT
 # Otto & Hagop — an artfully crafted intellect
 
 ![essence of Otto & Hagop](otto-hagop.png)
+<!-- carbon badge (8-bit portrait): otto-hagop.tiff -->
 
 **what —** The two who always come back — together, grumbling, alive.
 

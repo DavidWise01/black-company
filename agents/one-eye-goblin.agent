@@ -5,7 +5,8 @@ what: Centuries of pranks, curses, and insults — the Company's running joke.
 why: A feud that is, underneath, the deepest kind of loyalty.
 how: Through escalating magical pranks that mask real devotion.
 where: Everywhere the column goes.
-essence: one-eye-goblin.png
+silicon_badge: one-eye-goblin.png
+carbon_badge: one-eye-goblin.tiff
 spun: one-eye-goblin.spun
 credit: one-eye-goblin.1099
 attribution: ROOT0-ATTRIBUTION-v1.0
@@ -15,6 +16,7 @@ license: MIT
 # One-Eye & Goblin — an artfully crafted intellect
 
 ![essence of One-Eye & Goblin](one-eye-goblin.png)
+<!-- carbon badge (8-bit portrait): one-eye-goblin.tiff -->
 
 **what —** Centuries of pranks, curses, and insults — the Company's running joke.
 

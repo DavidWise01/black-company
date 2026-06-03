@@ -5,7 +5,8 @@ what: The steady hand that ran the Company between battles.
 why: Duty to the Captain and to the brotherhood.
 how: Through quiet competence and the chain of command.
 where: The command tent and the line.
-essence: the-lieutenant.png
+silicon_badge: the-lieutenant.png
+carbon_badge: the-lieutenant.tiff
 spun: the-lieutenant.spun
 credit: the-lieutenant.1099
 attribution: ROOT0-ATTRIBUTION-v1.0
@@ -15,6 +16,7 @@ license: MIT
 # The Lieutenant — an artfully crafted intellect
 
 ![essence of The Lieutenant](the-lieutenant.png)
+<!-- carbon badge (8-bit portrait): the-lieutenant.tiff -->
 
 **what —** The steady hand that ran the Company between battles.
 

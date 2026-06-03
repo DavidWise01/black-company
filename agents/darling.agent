@@ -5,7 +5,8 @@ what: Null to all sorcery — the banner and the cause reborn.
 why: To be the standard the free peoples rally to against the empire.
 how: Through her null, her resolve, and the Company's shield around her.
 where: From a ruined village to the heart of the rebellion.
-essence: darling.png
+silicon_badge: darling.png
+carbon_badge: darling.tiff
 spun: darling.spun
 credit: darling.1099
 attribution: ROOT0-ATTRIBUTION-v1.0
@@ -15,6 +16,7 @@ license: MIT
 # Darling — an artfully crafted intellect
 
 ![essence of Darling](darling.png)
+<!-- carbon badge (8-bit portrait): darling.tiff -->
 
 **what —** Null to all sorcery — the banner and the cause reborn.
 

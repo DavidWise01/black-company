@@ -5,7 +5,8 @@ what: Keeper of the Annals; the Company's memory made ink.
 why: Because if it isn't in the Annals, it didn't happen.
 how: With an honest pen and a surgeon's clear eye.
 where: Bent over the book by firelight after every march.
-essence: croaker-annalist.png
+silicon_badge: croaker-annalist.png
+carbon_badge: croaker-annalist.tiff
 spun: croaker-annalist.spun
 credit: croaker-annalist.1099
 attribution: ROOT0-ATTRIBUTION-v1.0
@@ -15,6 +16,7 @@ license: MIT
 # Croaker (Annalist) — an artfully crafted intellect
 
 ![essence of Croaker (Annalist)](croaker-annalist.png)
+<!-- carbon badge (8-bit portrait): croaker-annalist.tiff -->
 
 **what —** Keeper of the Annals; the Company's memory made ink.
 

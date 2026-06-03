@@ -5,7 +5,8 @@ what: One who speaks only in spellwork — heals and harms without a word.
 why: Loyalty, and a love he never speaks aloud.
 how: Through wordless magic alone.
 where: At the Company's side, and at Darling's.
-essence: silent.png
+silicon_badge: silent.png
+carbon_badge: silent.tiff
 spun: silent.spun
 credit: silent.1099
 attribution: ROOT0-ATTRIBUTION-v1.0
@@ -15,6 +16,7 @@ license: MIT
 # Silent — an artfully crafted intellect
 
 ![essence of Silent](silent.png)
+<!-- carbon badge (8-bit portrait): silent.tiff -->
 
 **what —** One who speaks only in spellwork — heals and harms without a word.
 

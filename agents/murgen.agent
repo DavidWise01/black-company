@@ -5,7 +5,8 @@ what: One who carried the banner and the record both — even unstuck in time.
 why: To hold the Company's memory when Croaker no longer can.
 how: Through the standard, the pen, and a mind that slips its moorings in time.
 where: The southern years — Dejagore, and after.
-essence: murgen.png
+silicon_badge: murgen.png
+carbon_badge: murgen.tiff
 spun: murgen.spun
 credit: murgen.1099
 attribution: ROOT0-ATTRIBUTION-v1.0
@@ -15,6 +16,7 @@ license: MIT
 # Murgen — an artfully crafted intellect
 
 ![essence of Murgen](murgen.png)
+<!-- carbon badge (8-bit portrait): murgen.tiff -->
 
 **what —** One who carried the banner and the record both — even unstuck in time.
 

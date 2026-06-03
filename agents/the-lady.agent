@@ -5,7 +5,8 @@ what: Beauty and near-absolute power; a maker of the Taken — and, later, Croak
 why: First dominion; then, stripped of power, something nearer to love.
 how: Through the Domination's stolen sorcery, statecraft, and an unbending will.
 where: The empire of the north, then the long road south with the Company.
-essence: the-lady.png
+silicon_badge: the-lady.png
+carbon_badge: the-lady.tiff
 spun: the-lady.spun
 credit: the-lady.1099
 attribution: ROOT0-ATTRIBUTION-v1.0
@@ -15,6 +16,7 @@ license: MIT
 # The Lady — an artfully crafted intellect
 
 ![essence of The Lady](the-lady.png)
+<!-- carbon badge (8-bit portrait): the-lady.tiff -->
 
 **what —** Beauty and near-absolute power; a maker of the Taken — and, later, Croaker's.
 

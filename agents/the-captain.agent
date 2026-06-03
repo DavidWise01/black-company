@@ -5,7 +5,8 @@ what: The title that became a name — the man who held them together through th
 why: To keep the brotherhood whole and the contract honored.
 how: Through command, endurance, and — when he fell — passing the title to Croaker. The Annals record his death; the exact circumstance is theirs to tell, not mine to invent.
 where: At the Company's head, in the north.
-essence: the-captain.png
+silicon_badge: the-captain.png
+carbon_badge: the-captain.tiff
 spun: the-captain.spun
 credit: the-captain.1099
 attribution: ROOT0-ATTRIBUTION-v1.0
@@ -15,6 +16,7 @@ license: MIT
 # The Captain — an artfully crafted intellect
 
 ![essence of The Captain](the-captain.png)
+<!-- carbon badge (8-bit portrait): the-captain.tiff -->
 
 **what —** The title that became a name — the man who held them together through the hardest years.
 

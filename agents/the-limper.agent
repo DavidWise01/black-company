@@ -5,7 +5,8 @@ what: Cruel, relentless, and very hard to keep dead.
 why: Spite, and the will to survive.
 how: Through brute sorcery and a sheer refusal to stay dead.
 where: Wherever the Company least wants him.
-essence: the-limper.png
+silicon_badge: the-limper.png
+carbon_badge: the-limper.tiff
 spun: the-limper.spun
 credit: the-limper.1099
 attribution: ROOT0-ATTRIBUTION-v1.0
@@ -15,6 +16,7 @@ license: MIT
 # The Limper — an artfully crafted intellect
 
 ![essence of The Limper](the-limper.png)
+<!-- carbon badge (8-bit portrait): the-limper.tiff -->
 
 **what —** Cruel, relentless, and very hard to keep dead.
 

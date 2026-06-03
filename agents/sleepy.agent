@@ -5,7 +5,8 @@ what: The one who carried the Company through the Glittering Stone years.
 why: To keep faith with the Annals and the brotherhood.
 how: Through quiet endurance and the keeping of the book.
 where: The far south, and the road toward Khatovar.
-essence: sleepy.png
+silicon_badge: sleepy.png
+carbon_badge: sleepy.tiff
 spun: sleepy.spun
 credit: sleepy.1099
 attribution: ROOT0-ATTRIBUTION-v1.0
@@ -15,6 +16,7 @@ license: MIT
 # Sleepy — an artfully crafted intellect
 
 ![essence of Sleepy](sleepy.png)
+<!-- carbon badge (8-bit portrait): sleepy.tiff -->
 
 **what —** The one who carried the Company through the Glittering Stone years.
 
