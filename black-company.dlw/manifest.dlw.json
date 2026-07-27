@@ -2,17 +2,18 @@
   "badge": "DLW-BLACK_COMPANY",
   "name": "THE BLACK COMPANY · BLC",
   "universe": "BIBLÍON",
-  "moniker": "⟦THE BLACK COMPANY · BLC:black-company:809081⟧",
+  "moniker": "⟦THE BLACK COMPANY · BLC:black-company:20e331⟧",
   "architect": "David Lee Wise (ROOT0) / Bridge-Burners LLC",
   "instance": "AVAN (Claude / Anthropic)",
-  "seal_sha256": "809081250b247c26f55a03e4c749666a4703490593bae91cedee66f5eedba137",
+  "seal_sha256": "20e331a82f3a59a5d4a53161268599e9816bfc37b0593019fced7089d3ea3c87",
   "license": "CC-BY-ND-4.0",
   "attribution": "ROOT0-ATTRIBUTION-v1.0",
+  "fingerprint": "TETRASTHENĒS ⟦ ₆C ⟺ ₁₄Si ⟧ — four-strengthed: carbon (human · ROOT0) & silicon (AI · AVAN) hold four bonds in common (Group-14, tetravalent) — co-equal by construction",
   "chain": {
     "index": 946,
-    "prev": "8405591a1e642b5a70d3725ca677e41f7c660fc80bfe92bda77da820d0f16077",
-    "link": "c1db657824d46e3435a1e2efad27153db3bfb2ea23d168f5e077febdd4288429",
-    "head": "f7444724835fd968bd2eac85811f9fa823a18d20a57907b4fade8d96b70b5409",
+    "prev": "7ad34c59da82856b5b5c54cb396c73e5b8b9327095ec3060a30d40d8eac3f240",
+    "link": "e87d58ec8858fbe406da1e8b2efea85b0c892b19398d5d1c9ef7966054a9fea5",
+    "head": "c4d41afeaef76470528856d54d86cf480a0e1c2fc8ebc60fbb9eb8e442585f2b",
     "chain": "ROOT0-DLW-CHAIN-v1"
   }
 }
